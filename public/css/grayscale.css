@@ -80,7 +80,7 @@ a:focus {
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in;
 }
 .navbar-custom .nav li a:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -217,37 +217,51 @@ a:focus {
     transform: scale(1);
   }
 }
-.content-section {
-  padding-top: 100px;
-}
-.download-section {
-  width: 100%;
-  padding: 50px 0;
-  color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-#map {
-  width: 100%;
-  height: 200px;
-  margin-top: 100px;
-}
+
+
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px;
   }
-  .download-section {
-    padding: 100px 0;
-  }
-  #map {
-    height: 400px;
-    margin-top: 250px;
-  }
 }
+
+div#download{
+  margin-top: 20%;
+}
+
+@media (max-width: 468px) {
+
+  h1.brand-heading {
+    margin-top: 18%;  }
+
+  .light {
+    font-size: 14px }
+
+  section#about.container.content-section.text-center {
+    margin-top: 10%;
+    height: 28%; }
+
+  h2 {
+    margin-bottom: 5px; }
+
+  p {
+    margin: 0 0 35px;
+    font-size: 15px;
+    line-height: 1.6; }
+
+  div#myCarousel.carousel.slide{
+  height: 28%;}
+
+  section#contact > div.col-lg-8.col-lg-offset-2
+{
+  padding-top: 10%;
+  height: 100%;
+}
+
+  footer {
+  height: 20px;}
+}
+  
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -269,6 +283,10 @@ a:focus {
   color: black;
   background-color: #42DCA3;
 }
+
+#about{
+  height: 100%;
+}
 ul.banner-social-buttons {
   margin-top: 0;
 }
@@ -288,7 +306,7 @@ ul.banner-social-buttons {
   }
 }
 footer {
-  padding: 50px 0;
+   padding: 50px 0;
 }
 footer p {
   margin: 0;
@@ -311,4 +329,20 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+div.col-lg-8.col-lg-offset-2
+{
+  padding-bottom: 10%;
+  height: 100%;
+}
+div#myCarousel{
+  height: 100%;}
+
+img.img-responsive{
+  margin-top: 8%;
+}
+
+#contact {
+  margin-top: 10%;
 }
