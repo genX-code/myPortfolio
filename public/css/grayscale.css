@@ -296,6 +296,14 @@ ul.banner-social-buttons {
   }
 }
 @media (max-width: 767px) {
+
+section#about.container.content-section.text-center {
+    margin-top: 10%;
+    height: 31%; }
+
+  div#myCarousel.carousel.slide{
+  height: 40%;}
+
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
