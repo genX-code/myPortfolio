@@ -257,6 +257,10 @@ div#download{
 
   footer.conatainer.text-center {
   padding: 0;}
+
+  .side img {
+    display: none;
+  }
 }
   
 .btn {
