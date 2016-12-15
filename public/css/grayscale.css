@@ -152,6 +152,13 @@ a:focus {
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
+
+  div#myCarousel.carousel.slide.carousel{
+  height: 80%;}
+
+  div#myCarousel.carousel.slide.carousel img{
+  margin-top: 40%;
+ }
 }
 .btn-circle {
   width: 70px;
