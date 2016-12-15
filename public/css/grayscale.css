@@ -153,11 +153,6 @@ a:focus {
     font-size: 26px;
   }
 
-  div#myCarousel.carousel.slide.carousel{
-  height: 80%;}
-
-  div#myCarousel.carousel.slide.carousel img{
-  margin-top: 40%;
  }
 }
 .btn-circle {
@@ -248,8 +243,11 @@ div#download{
   height: 100%;}
 
 
-   div#myCarousel.carousel.slide.carousel{
-  height: 75%;}
+     div#myCarousel.carousel.slide.carousel{
+  height: 80%;}
+
+  div#myCarousel.carousel.slide.carousel img{
+  margin-top: 40%;
 
 }
 
