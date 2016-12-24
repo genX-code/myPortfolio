@@ -32,5 +32,33 @@ $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
 
+//function initMap() {
+//        var myAPI = 'AIzaSyBRXMuAtAtasFG4Ry5kfbb_1WNvlxrjiTA';
+//        var tagaytay = {lat: 14.131195, lng: 120.901564};
+//        var map = new google.maps.Map(document.getElementById('map'), {
+//          zoom: 15,
+//          center: tagaytay
+//        });
+//        var marker = new google.maps.Marker({
+//          position: tagaytay,
+//          map: map
+//        });
+//      }
 
+ function init_map(){
+      var myOptions = {
+      zoom:10,
+      center:new google.maps.LatLng(14.1311947,120.90156419999994),
+      mapTypeId: google.maps.MapTypeId.ROADMAP};
 
+      map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+
+      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(14.1311947,120.90156419999994)});
+
+      infowindow = new google.maps.InfoWindow({content:'<strong>myLocation</strong><br>Mendez, Cavite<br>'});
+
+      google.maps.event.addListener(marker, 'click', function(){
+      infowindow.open(map,marker);});
+      infowindow.open(map,marker);}
+
+      google.maps.event.addDomListener(window, 'load', init_map);
