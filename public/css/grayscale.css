@@ -426,10 +426,11 @@ text-shadow: rgba(255,255,255,.5) 0 0 15px, rgba(255,255,255,.5) 0 0 10px;
 
 .map-container {
   margin: auto;
-  text-align: center;
+  text-align: center; 
 }
 
  #gmap_canvas {
+    color: black;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 50px;

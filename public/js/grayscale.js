@@ -32,36 +32,46 @@ $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
 
-//function initMap() {
-//        var myAPI = 'AIzaSyBRXMuAtAtasFG4Ry5kfbb_1WNvlxrjiTA';
-//        var tagaytay = {lat: 14.131195, lng: 120.901564};
-//        var map = new google.maps.Map(document.getElementById('map'), {
-//          zoom: 15,
-//          center: tagaytay
-//        });
-//        var marker = new google.maps.Marker({
-//          position: tagaytay,
-//          map: map
-//        });
-//      }
 
- function init_map(){
-      var myOptions = {
-      zoom:15,
-      center:new google.maps.LatLng(14.1311947,120.90156419999994),
-      mapTypeId: google.maps.MapTypeId.ROADMAP};
+ 
+  //Google Maps JS
+  //Set Map
 
-      map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+  function init_map() {
+    var myLatlng = new google.maps.LatLng(14.1311947,120.90156419999994);
+    var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png'
+    var mapOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
 
-      marker = new google.maps.Marker({
-        map: map,
-        position: new google.maps.LatLng(14.1311947,120.90156419999994)});
+    var map = new google.maps.Map(document.getElementById('gmap_canvas'), mapOptions);
+    
+    //Set window width + content
+    var infowindow = new google.maps.InfoWindow({
+      content: '1424 Perey Street <br/>Asis, Mendez, Cavite'
+    });
 
-      var infowindow = new google.maps.InfoWindow({
-        content:'Asis II, Mendez, Cavite'});
+    //Add Marker
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      icon: imagePath,
+      title: 'My Location'
+    });
 
-      google.maps.event.addListener(marker, 'click', function(){
-        infowindow.open(map, marker);});
-        }
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
 
-      google.maps.event.addDomListener(window, 'load', init_map);
+    //Resize Function
+    google.maps.event.addDomListener(window, "resize", function() {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', init_map);
+
