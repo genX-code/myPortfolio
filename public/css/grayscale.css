@@ -366,8 +366,9 @@ img.img-responsive{
   margin-top: 8%;
 }
 
-#contact {
+#contact .col-lg-8.col-lg-offset-2{
   margin-top: 10%;
+  padding-bottom: 4%;
 }
 
 #logos li {
@@ -430,6 +431,8 @@ text-shadow: rgba(255,255,255,.5) 0 0 15px, rgba(255,255,255,.5) 0 0 10px;
 
  #gmap_canvas {
     margin: 0 auto;
+    margin-top: 0;
     margin-bottom: 50px;
+    box-shadow: rgba(255,255,255,.5) 0 0 15px, rgba(255,255,255,.5) 0 0 10px;
     max-width:none!important;
     background:none!important}

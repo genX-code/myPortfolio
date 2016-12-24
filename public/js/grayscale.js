@@ -47,18 +47,21 @@ $('.navbar-collapse ul li a').click(function() {
 
  function init_map(){
       var myOptions = {
-      zoom:10,
+      zoom:15,
       center:new google.maps.LatLng(14.1311947,120.90156419999994),
       mapTypeId: google.maps.MapTypeId.ROADMAP};
 
       map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
 
-      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(14.1311947,120.90156419999994)});
+      marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(14.1311947,120.90156419999994)});
 
-      infowindow = new google.maps.InfoWindow({content:'<strong>myLocation</strong><br>Mendez, Cavite<br>'});
+      var infowindow = new google.maps.InfoWindow({
+        content:'Asis II, Mendez, Cavite'});
 
       google.maps.event.addListener(marker, 'click', function(){
-      infowindow.open(map,marker);});
-      infowindow.open(map,marker);}
+        infowindow.open(map, marker);});
+        }
 
       google.maps.event.addDomListener(window, 'load', init_map);
